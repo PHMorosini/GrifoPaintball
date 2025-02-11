@@ -1,0 +1,152 @@
+.card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+.carousel-item {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.carousel-item-prev,
+.carousel-item-next {
+    opacity: 0.5; /* Escurece as imagens laterais */
+    transform: scale(0.8) translateX(-100%); /* Diminui e desloca */
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #FFD700 !important; 
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 15px rgb(187, 255, 0); 
+    cursor: pointer;
+}
+
+/* Garante que os estilos afetem apenas os cards da seção #Campos */
+#Campos .card-container {
+    width: 100%;
+    max-width: 300px; /* Define um tamanho máximo para evitar distorções */
+    height: 350px; /* Define uma altura fixa */
+    perspective: 1000px;
+    cursor: pointer;
+    margin: auto;
+}
+
+#Campos .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+#Campos .card-container.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+#Campos .card-front,
+#Campos .card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#Campos .card-front {
+    background-color: black;
+}
+
+#Campos .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#Campos .card-back {
+    background-color: #333;
+    transform: rotateY(180deg);
+    padding: 30px;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid gray;
+  }
+  th {
+    background-color: gray;
+  }
+  caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .team-image {
+    position: relative;
+    display: inline-block;
+}
+
+.team-image img {
+    border-radius: 8px;
+    border: 3px solid #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grifo img {
+    width: 250px; /* Tamanho maior */
+    height: 200px; /* Tamanho maior */
+    z-index: 10; /* Para garantir que a imagem da Grifo fique à frente */
+}
+
+.team-image img:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Efeito de fogo ao redor das imagens */
+.team-image img {
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 69, 0, 0.3);
+    animation: flame 1.5s infinite alternate;
+}
+
+@keyframes flame {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.5), 0 0 30px rgba(255, 69, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 69, 0, 0.7), 0 0 50px rgba(255, 69, 0, 0.4);
+    }
+}
+
+.card a {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;         /* Herda a cor do texto pai */
+}
+
+.card a:hover {
+    text-decoration: none;  /* Remove o sublinhado no hover */
+}
+
